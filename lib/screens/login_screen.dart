@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_flash_chat/constants.dart';
 import '../components/padding.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -34,24 +35,8 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: const InputDecoration(
-                hintText: 'Enter your email',
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-              ),
+              decoration:
+                  kTextFieldDecoration.copyWith(hintText: 'Enter your email'),
             ),
             const SizedBox(
               height: 8.0,
@@ -60,31 +45,15 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: const InputDecoration(
-                hintText: 'Enter your password.',
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-              ),
+              decoration: kTextFieldDecoration.copyWith(
+                  hintText: 'Enter your Password'),
             ),
             const SizedBox(
               height: 24.0,
             ),
             CustomPadding(
               color: Colors.lightBlueAccent,
-              onButtonPress: () {},
+              onPressed: () {},
               text: 'Log In',
             ),
           ],
