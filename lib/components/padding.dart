@@ -4,10 +4,10 @@ class CustomPadding extends StatelessWidget {
   const CustomPadding(
       {super.key,
       required this.color,
-      required this.onButtonPress,
+      required this.onPressed,
       required this.text});
   final Color color;
-  final Function onButtonPress;
+  final Function onPressed;
   final String text;
 
   @override
@@ -19,11 +19,14 @@ class CustomPadding extends StatelessWidget {
         color: color,
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
-          onPressed: onButtonPress(),
+          onPressed: () {
+            onPressed();
+          },
           minWidth: 200.0,
           height: 42.0,
           child: Text(
             text,
+            style: const TextStyle(color: Colors.white),
           ),
         ),
       ),

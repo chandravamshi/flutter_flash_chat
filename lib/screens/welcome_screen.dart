@@ -47,14 +47,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             CustomPadding(
                 color: Colors.lightBlueAccent,
-                onButtonPress: () {
+                onPressed: () {
                   //Go to login screen.
                   Navigator.pushNamed(context, LoginScreen.id);
                 },
                 text: 'Log In'),
             CustomPadding(
                 color: Colors.lightBlueAccent,
-                onButtonPress: () {
+                onPressed: () {
                   //Go to Register screen.
                   Navigator.pushNamed(context, RegistrationScreen.id);
                 },
